@@ -11,7 +11,7 @@
 ## Warnings: A warning will be generated if x is not a square matrix
 ## Return Value : A list of functions(set, get, setInverse, getInverse)
 makeCacheMatrix <- function(x = matrix()) {
-      if(!isSymmetric.matrix(x)) {
+      if(ncol(x) != nrow(x)) {
             warning("The inverse of a matrix can only be calculated for a",
                   " square matrix\n\tSubsequent Calls to cacheSolve will",
                   " fail")
